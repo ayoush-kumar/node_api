@@ -11,8 +11,9 @@ app.get("/", (req,res) =>{
 
 app.get("/chats", function(req,res){
     fs.readFile(__dirname + '/' + "data.json", 'utf8', function(err, dataa){
-        console.log(dataa);
-        res.end(dataa);
+        //console.log(dataa);
+        res.end(dataa); // res.end() gives the formated json object
+        // res.send() gives a text file 
     })
 });
 
